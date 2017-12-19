@@ -3,5 +3,6 @@ npm-debug.log
 coverage
 .coveralls.yml
 .nyc_output
+.travis.yml
 yarn.lock
 .DS_Store
