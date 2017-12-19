@@ -1,0 +1,47 @@
+{
+  "name": "melbourne-metro-sdk",
+  "version": "1.0.0",
+  "description": "A reference implementation to fetch Melbourne Metro next train information form their API",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "cover": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "files": [
+    "lib",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "Melbourne",
+    "Metro",
+    "Timetable",
+    "Train"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gssumesh/melbourne-metro-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gssumesh/melbourne-metro-sdk/issues"
+  },
+  "homepage": "https://github.com/gssumesh/melbourne-metro-sdk#readme",
+  "author": "Sumesh Suvarna <gs.sumesh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "moment": "^2.19.4",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "jest": "^21.2.1"
+  }
+}
