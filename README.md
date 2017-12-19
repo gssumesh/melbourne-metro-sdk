@@ -1,7 +1,7 @@
 # melbourne-metro-sdk
 
 [![Coverage Status](https://coveralls.io/repos/github/gssumesh/melbourne-metro-sdk/badge.svg?branch=master)](https://coveralls.io/github/gssumesh/melbourne-metro-sdk?branch=master)
-[![Build Status](https://img.shields.io/travis/gssumesh/melbourne-metro-sdk.svg?maxAge=1000)](https://travis-ci.org/gssumesh/melbourne-metro-sdk)
+[![Build Status](https://travis-ci.org/gssumesh/melbourne-metro-sdk.svg?branch=master)](https://travis-ci.org/gssumesh/melbourne-metro-sdk)
 
 A reference implementation for Melbourne Metro SDK v3. It tries to fetch next train information calling Metro SDK based on the API keys provided.
 
