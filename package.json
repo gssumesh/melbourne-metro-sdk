@@ -37,6 +37,8 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "moment": "^2.19.4",
+    "react-native-crypto": "^2.1.1",
+    "react-native-randombytes": "^3.0.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   },

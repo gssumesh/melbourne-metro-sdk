@@ -1,5 +1,5 @@
 jest.mock('../lib/services');
-const {init, nextTrain, config} = require('../lib');
+const {init, config} = require('../lib');
 const {departures} = require('../lib/services');
 
 describe('Class: MelbourneMetroSDK', () => {
@@ -24,7 +24,7 @@ describe('Class: MelbourneMetroSDK', () => {
 
 		const initResp = init({app_key, app_secret});
 		expect.assertions(2);
-		return nextTrain({ route_type, stop_id, route_id }).then(data => {
+		return initResp.nextTrain({ route_type, stop_id, route_id }).then(data => {
 			expect(departures.getDepartureByStopForRoute).toHaveBeenCalled();
 			expect(departures.getDepartureByStopForRoute).toHaveBeenCalledWith(initResp.config, { route_type, stop_id, route_id });
 		});	
@@ -42,7 +42,7 @@ describe('Class: MelbourneMetroSDK', () => {
 
 		const initResp = init({app_key, app_secret});
 		expect.assertions(1);
-		return nextTrain({ route_type, stop_id, route_id }).then(data => {
+		return initResp.nextTrain({ route_type, stop_id, route_id }).then(data => {
 			expect(data.id).toEqual(0); 
 		});	
 
@@ -59,7 +59,7 @@ describe('Class: MelbourneMetroSDK', () => {
 
 		const initResp = init({app_key, app_secret});
 		expect.assertions(1);
-		return nextTrain({ route_type, stop_id, route_id }).then(data => {
+		return initResp.nextTrain({ route_type, stop_id, route_id }).then(data => {
 			expect(data.id).toEqual(5); 
 		});	
 
@@ -73,7 +73,7 @@ describe('Class: MelbourneMetroSDK', () => {
 		const app_secret = 'MY_APP_SECRET';
 		const initResp = init({app_key, app_secret});
 		expect.assertions(1);
-		return nextTrain({ route_type, stop_id, route_id }).catch(e => {
+		return initResp.nextTrain({ route_type, stop_id, route_id }).catch(e => {
 			expect(e).toEqual('Error fetching Next Train'); 
 		});	
 
