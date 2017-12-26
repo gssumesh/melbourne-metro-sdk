@@ -43,7 +43,7 @@ describe('Class: MelbourneMetroSDK', () => {
 		const initResp = init({app_key, app_secret});
 		expect.assertions(1);
 		return initResp.nextTrain({ route_type, stop_id, route_id }).then(data => {
-			expect(data.id).toEqual(0); 
+			expect(data.departures.id).toEqual(0); 
 		});	
 
 	})
@@ -60,7 +60,7 @@ describe('Class: MelbourneMetroSDK', () => {
 		const initResp = init({app_key, app_secret});
 		expect.assertions(1);
 		return initResp.nextTrain({ route_type, stop_id, route_id }).then(data => {
-			expect(data.id).toEqual(5); 
+			expect(data.departures.id).toEqual(5); 
 		});	
 
 	})
