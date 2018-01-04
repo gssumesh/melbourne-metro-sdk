@@ -18,19 +18,27 @@ A reference implementation for Melbourne Metro SDK v3. It tries to fetch next tr
 
 ```
 const melbourneMetro = require('melbourne-metro-sdk');
-melbourneMetro.init({
+const melbourneMetroConfig = melbourneMetro.init({
 		api: {
 			BASE_URL: 'sample_base_url',
 			APP_KEY: 'sample_app_key',
 			APP_USER: 'sample_app_user'
 		}
-	}).nextTrain({
+	})
+
+melbourneMetroConfig.nextTrain({
  route_id: 5,
  route_type: 0,
  stop_id: 1155
+}).then(data => console.log(data)).catch(e => console.log(e)); 
+
+melbourneMetroConfig.routeDetails({
+ route_type: 0
 }).then(data => console.log(data)).catch(e => console.log(e)); 
 
 ```
 ## Methods Supported
 
 * nextTrain({route_id, route_type, stop_id}) => Promise with next Train details
+
+* routeDetails({route_type}) => Promise with route details including all stops 

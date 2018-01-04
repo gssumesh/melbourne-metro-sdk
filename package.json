@@ -1,6 +1,6 @@
 {
   "name": "melbourne-metro-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A reference implementation to fetch Melbourne Metro next train information form their API",
   "main": "lib/index.js",
   "engines": {
